@@ -52,6 +52,7 @@ new Swiper('.notice-line .swiper-container', {
   loop: true
 });
 
+// Promotion 이미지 슬라이드
 new Swiper('.promotion .swiper-container', {
   // direction: 'horizontal', 기본값
   slidesPerView: 3, // 한번에 보여줄 슬라이드 개수
@@ -71,7 +72,7 @@ new Swiper('.promotion .swiper-container', {
   }
 });
 
-
+// Promotion 토글 여닫힘
 const promotionEl = document.querySelector('.promotion');
 const promotionToggleBtn = document.querySelector('.toggle-promotion');
 let isHidePromotion = false;
