@@ -136,3 +136,7 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, 'show')
     .addTo(new ScrollMagic.Controller());
 });
+
+// 연도 출력
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear(); // 2021
