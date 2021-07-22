@@ -16,6 +16,7 @@ searchInputEl.addEventListener('blur', function() {
 });
 
 const badgeEl = document.querySelector('header .badges');
+const toTopEl = document.querySelector('#to-top');
 
 // _.throttle(함수, 시간)
 window.addEventListener('scroll', _.throttle(function() {
@@ -27,14 +28,29 @@ window.addEventListener('scroll', _.throttle(function() {
       opacity: 0,
       display: 'none'
     });
+    // 버튼 보이기
+    gsap.to(toTopEl, .2, {
+      x: 0
+    });
   } else {
     // 뱃지 보이기
     gsap.to(badgeEl, .6, {
       opacity: 1,
       display: 'block'
     });
+    // 버튼 숨기기
+    gsap.to(toTopEl, .2, {
+      x: 100
+    });
   }
 }, 300));
+
+// 맨 위로
+toTopEl.addEventListener('click', function () {
+  gsap.to(window, .7, {
+    scrollTo: 0
+  });
+});
 
 // 비주얼 화면 fade-in 액션
 const fadeEls = document.querySelectorAll('.visual .fade-in');
