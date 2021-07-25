@@ -247,34 +247,6 @@ new ScrollMagic
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
 ```
 
-## JS Strict Mode
-
-JavaScript를 '엄격 모드'로 사용합니다.<br>
-파일 혹은 함수의 최상단에 작성해야 합니다.
-
-```javascript
-'use strict';
-```
-
-> 'Strict Mode'는 ECMAScript 5 버전에 있는 새로운 기능으로써, 프로그램 또는 함수를 엄격한 운용 콘텍스트 안에서 실행시킬 수 있게끔 합니다. 이 엄격한 콘텍스트는 몇가지 액션들을 실행할 수 없도록 하며, 좀 더 많은 예외를 발생시킵니다.
-
-### 엄격 모드의 장점
-
-- 일반적인 코딩 실수에서 예외 처리
-- 안전하지 않은 액션에 대한 예외 처리 (ex: 전역 객체로 접근)
-- 혼란스럽거나 제대로 고려되지 않는 기능들을 비활성화
-
-## 랜덤한 숫자를 생성하는 함수
-
-```js
-// 범위 랜덤 함수(소수점 2자리까지)
-function random(min, max) {
-  // `.toFixed()`를 통해 반환된 문자 데이터를,
-  // `parseFloat()`을 통해 소수점을 가지는 숫자 데이터로 변환
-  return parseFloat((Math.random() * (max - min) + min).toFixed(2))
-}
-```
-
 ## Main menu in Header
 
 ```html
